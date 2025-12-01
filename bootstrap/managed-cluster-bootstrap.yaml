@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: managed-cluster-bootstrap
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/nsaraiya-rh/openshift-acm-gitops-new-2.git
+    targetRevision: HEAD
+    path: managed-gitops
+  destination:
+    server: https://kubernetes.default.svc # REPLACE with Managed Cluster URL or Name
+    namespace: openshift-gitops
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

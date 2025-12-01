@@ -1,0 +1,9 @@
+keycloak:
+  auth:
+    adminUser: admin
+    adminPassword: password
+  production: false
+  proxy: edge
+  ingress:
+    enabled: true
+    hostname: keycloak.example.com
