@@ -10,7 +10,7 @@ spec:
     targetRevision: HEAD
     path: managed-gitops
   destination:
-    server: https://kubernetes.default.svc # REPLACE with Managed Cluster URL or Name
+    server: https://api.cluster-bqtvl.bqtvl.sandbox2796.opentlc.com:6443
     namespace: openshift-gitops
   syncPolicy:
     automated:
