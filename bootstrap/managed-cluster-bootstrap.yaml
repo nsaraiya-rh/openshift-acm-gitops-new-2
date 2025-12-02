@@ -10,7 +10,7 @@ spec:
     targetRevision: HEAD
     path: managed-gitops
   destination:
-    server: https://api.cluster-bqtvl.bqtvl.sandbox2796.opentlc.com:6443
+    server: https://api.crc.testing:6443
     namespace: openshift-gitops
   syncPolicy:
     automated:
