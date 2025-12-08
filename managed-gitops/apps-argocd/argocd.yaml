@@ -8,6 +8,9 @@ kind: ArgoCD
 metadata:
   name: apps-argocd
   namespace: apps-argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   server:
     route:
@@ -21,6 +24,9 @@ kind: Application
 metadata:
   name: sample-app
   namespace: apps-argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   project: default
   source:
